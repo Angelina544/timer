@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* .section-timer {
+.section-timer {
     width: 25%;
     background: yellow;
     border-radius: 15px;
@@ -42,14 +42,17 @@
     border-color: black;
     border-width: 2px;
     border-style: solid;
-} */
+}
 
 
 
 
+.section-timer2 {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
 
-
-/* .timer2 {
+.timer2 {
     width: 50%;
     padding: 20px 20px;
     background: coral;
@@ -82,7 +85,7 @@
     background: white;
     border-radius: 5px;
     border-style: solid;
-} */
+}
 
 
 

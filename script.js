@@ -1,96 +1,96 @@
-// const input = document.querySelector('.input-section__input');
-// const button = document.querySelector('.input-section__button');
+const input = document.querySelector('.input-section__input');
+const button = document.querySelector('.input-section__button');
 
-// document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-//     function timeCount(id) {
-//         const timer = document.getElementById(id);
+    function timeCount(id) {
+        const timer = document.getElementById(id);
 
-//         function setTime() {
-//             const seconds = timer.querySelector('.timer__count-seconds');
+        function setTime() {
+            const seconds = timer.querySelector('.timer__count-seconds');
 
-//             button.addEventListener('click', function () {
-//                 if (input.value == 'admin') {
-//                     alert('Ласкаво просимо');
-//                     clearInterval(timeInterval);
-//                     seconds.textContent = '00';
-//                 }
-//             });
+            button.addEventListener('click', function () {
+                if (input.value == 'admin') {
+                    alert('Ласкаво просимо');
+                    clearInterval(timeInterval);
+                    seconds.textContent = '00';
+                }
+            });
 
-//             let leftUntill = 20;
-//             let timeInterval = setInterval(function () {
-//                 if (leftUntill <= 0) {
-//                     clearInterval(timeInterval);
-//                     seconds.textContent = '00';
-//                     alert('Ви не встигли');
-//                 }
-//                 else {
-//                     if (leftUntill <= 9) {
-//                         seconds.textContent = `0${leftUntill}`;
-//                         leftUntill--;
+            let leftUntill = 20;
+            let timeInterval = setInterval(function () {
+                if (leftUntill <= 0) {
+                    clearInterval(timeInterval);
+                    seconds.textContent = '00';
+                    alert('Ви не встигли');
+                }
+                else {
+                    if (leftUntill <= 9) {
+                        seconds.textContent = `0${leftUntill}`;
+                        leftUntill--;
 
-//                     }
-//                     else {
-//                         seconds.textContent = leftUntill;
-//                         leftUntill--;
-//                     };
-//                 };
-//             }, 1000);
-//         };
-//         setTime();
-//     };
-//     timeCount('timer');
-// });
-
-
+                    }
+                    else {
+                        seconds.textContent = leftUntill;
+                        leftUntill--;
+                    };
+                };
+            }, 1000);
+        };
+        setTime();
+    };
+    timeCount('timer');
+});
 
 
 
-// const btnStart = document.getElementById('start');
-// const btnStop = document.getElementById('stop');
 
-// btnStart.addEventListener('click', function () {
-//     function timeCount(id) {
-//         const timer = document.getElementById(id);
 
-//         function setTime() {
-//             const minutes = timer.querySelector('.time-count__minutes');
-//             const seconds = timer.querySelector('.time-count__seconds');
+const btnStart = document.getElementById('start');
+const btnStop = document.getElementById('stop');
 
-//             let minutesCount = 0;
-//             let secondsCount = 0;
+btnStart.addEventListener('click', function () {
+    function timeCount(id) {
+        const timer = document.getElementById(id);
 
-//             let timeInterval = setInterval(function () {
-//                 if (secondsCount < 9) {
-//                     secondsCount++;
-//                     seconds.textContent = `0${secondsCount}`;
-//                 }
-//                 else if (secondsCount < 60) {
-//                     secondsCount++;
-//                     seconds.textContent = secondsCount;
-//                 }
-//                 else {
-//                     secondsCount = 0;
-//                     minutesCount++;
-//                     if (minutesCount <= 9) {
-//                         minutes.textContent = `0${minutesCount}:`;
-//                     }
-//                     else {
-//                         minutes.textContent = `${minutesCount}:`;
-//                     };
-//                 };
-//             }, 1000);
+        function setTime() {
+            const minutes = timer.querySelector('.time-count__minutes');
+            const seconds = timer.querySelector('.time-count__seconds');
 
-//             btnStop.addEventListener('click', function () {
-//                 clearInterval(timeInterval);
-//                 seconds.textContent = '00';
-//                 minutes.textContent = '00:';
-//             });
-//         };
-//         setTime();
-//     };
-//     timeCount('timer2');
-// });
+            let minutesCount = 0;
+            let secondsCount = 0;
+
+            let timeInterval = setInterval(function () {
+                if (secondsCount < 9) {
+                    secondsCount++;
+                    seconds.textContent = `0${secondsCount}`;
+                }
+                else if (secondsCount < 60) {
+                    secondsCount++;
+                    seconds.textContent = secondsCount;
+                }
+                else {
+                    secondsCount = 0;
+                    minutesCount++;
+                    if (minutesCount <= 9) {
+                        minutes.textContent = `0${minutesCount}:`;
+                    }
+                    else {
+                        minutes.textContent = `${minutesCount}:`;
+                    };
+                };
+            }, 1000);
+
+            btnStop.addEventListener('click', function () {
+                clearInterval(timeInterval);
+                seconds.textContent = '00';
+                minutes.textContent = '00:';
+            });
+        };
+        setTime();
+    };
+    timeCount('timer2');
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     function timeCount(id, endtime) {
